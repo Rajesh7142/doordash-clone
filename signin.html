@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Modal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        
+        .container {
+            height: 70vh; /* Increased height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal title */
+        .modal-title {
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Button group styling */
+        .d-flex button {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        /* Social login buttons */
+        .social-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .google-btn { background-color: #4285F4; color: white; }
+        .facebook-btn { background-color: #3B5998; color: white; }
+        .apple-btn { background-color: black; color: white; }
+
+        /* Email input */
+        .form-control {
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        /* Continue button */
+        .continue-btn {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 45px;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .continue-btn:hover {
+            background-color: darkred;
+        }
+
+        /* Footer text */
+        .modal-footer {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .modal-footer a {
+            color: red;
+            text-decoration: none;
+        }
+
+        .modal-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Sign in or Sign up</h5>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Sign In / Sign Up buttons -->
+                    <div class="d-flex justify-content-center mb-4">
+                        <button class="btn btn-dark me-2">Sign In</button>
+                        <button class="btn btn-light">Sign Up</button>
+                    </div>
+
+                    <!-- Social Login Buttons -->
+                    <button class="social-btn google-btn">Continue with Google</button>
+                    <button class="social-btn facebook-btn">Continue with Facebook</button>
+                    <button class="social-btn apple-btn">Continue with Apple</button>
+
+                    <hr>
+                    <p class="text-center fw-bold fs-4">or continue with email</p>
+
+                    <!-- Email Input -->
+                    <input type="email" class="form-control mb-3" placeholder="Enter your email">
+
+                    <!-- Continue Button -->
+                    <button class="continue-btn">Continue to Sign In</button>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer border-0">
+                   
+                       <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
