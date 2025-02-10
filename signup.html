@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ /* Full height and width settings */
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    margin: 0;
+}
+
+
+
+/* Styling the card */
+.card {
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+/* Title */
+h2 {
+    font-size:55px;
+}
+
+/* Toggle buttons */
+.toggle-buttons .btn {
+    flex: 1;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 50px;
+}
+
+/* Active button */
+.toggle-buttons .btn.active {
+    background-color: black;
+    color: white;
+}
+
+/* Form Inputs */
+form input,
+form select {
+    font-size: 50px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Password input with toggle */
+.position-relative {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+    font-size: 50px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    font-size: 55px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Terms & Conditions text */
+.text-muted {
+    font-size: 55px;
+    text-align: center;
+}
+input{
+    height: 100px;
+}
+.form-control{
+    font-size: 33px;
+    font-weight: bold;
+}
+
+
+        
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+        <h2 class="text-center fw-bold">Sign in or Sign up</h2>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons d-flex justify-content-center my-3">
+            <button id="signInBtn" class="btn btn-light active">Sign In</button>
+            <button id="signUpBtn" class="btn btn-dark">Sign Up</button>
+        </div>
+
+        <!-- Form Fields -->
+        <form id="authForm">
+            <div id="nameFields" class="row g-2">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+
+            <input type="email" class="form-control mt-3" placeholder="Email">
+
+            <div class="row g-2 mt-3">
+                <div class="col-md-4">
+                    <select class="form-select">
+                        <option>+1 (US)</option>
+                        <option>+91 (IN)</option>
+                        <option>+44 (UK)</option>
+                    </select>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Mobile Number">
+                </div>
+            </div>
+
+            <div class="position-relative mt-3">
+                <input type="password" id="password" class="form-control" placeholder="Password">
+                <span class="toggle-password" onclick="togglePassword()">Show</span>
+            </div>
+
+            <p class="text-muted mt-2 small">
+                By tapping “Sign Up” or “Continue with...,” you agree to our 
+                <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+            </p>
+
+            <button type="submit" class="btn btn-danger w-100">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
